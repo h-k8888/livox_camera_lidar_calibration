@@ -53,6 +53,11 @@ target_link_libraries(cameraCalib ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_executable(pcdTransfer src/pcdTransfer.cpp src/common.h)
 target_link_libraries(pcdTransfer ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
+#transfer livox point cloud(rosbag) to pcd file
+add_executable(lvxbag2pcd src/lvxbag2pcd.cpp src/common.h)
+target_link_libraries(lvxbag2pcd ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+
 add_executable(cornerPhoto src/corner_photo.cpp src/common.h)
 target_link_libraries(cornerPhoto ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
